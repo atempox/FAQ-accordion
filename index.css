@@ -1,84 +1,79 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    color: #fff;
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --LightPink: hsl(275, 100%, 97%);
+    --GrayishPurple: hsl(292, 16%, 49%);
+    --DarkPurple: hsl(292, 42%, 14%);
+  
 }
+
 body {
-    min-height: 100vh;
-    background: #0f011f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.percentageCard {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    margin: 0;
     position: relative;
-    height: auto;
-    width: 320px;
-    background: rgba(0, 0, 0, .2);
-    padding: 0 2px;
+    background-color: var(--white);
 }
-.percentageCard .skills {
-    margin: 20px 0;
-    display: flex;
-
-}
-.percentageCard .skills .porcentage {
-    margin-left: 15px;
+#header {
+    width: 100vw;
+    height: 250px;
+    background: url(./assets/images/background-pattern-desktop.svg);
+    background-size: cover;
+    z-index: 0;
 }
 
-.percentageCard .skills .progress {
-    direction: rtl;
-    position: relative;
-    width: 100%;
-    height: 6px;
-    border-radius: 6px;
-    overflow: hidden;
-    margin: 5px 0 0 15px;
-    border: 1px solid white;
-
-}
-.percentageCard .skills .progress::before {
-    content: '';
+#card {
+    width: 500px;
+    height: 404px;
     position: absolute;
-    width: var(--wth);
-    height: 100%;
-    background: #0280fe;
+    z-index: 2;
+    background-color: var(--LightPink);
+    margin: -9% 0% 0% 30% ;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.345);
 }
-.torta {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    position: relative;
-  }
-  
-  .porcion {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    clip-path: polygon(50% 50%, 100% 0, 100% 100%);
-    overflow: hidden;
-  }
-  
-  .porcion1 {
-    transform: rotate(0deg);
-    background: conic-gradient(#ff6347 0%, #ff6347 25%, #00ff00 25%, #00ff00 50%, #0000ff 50%, #0000ff 75%, #ffd700 75%, #ffd700 100%);
-  }
-  
-  .porcion2 {
-    transform: rotate(90deg);
-    background: conic-gradient(#ffd700 0%, #ffd700 25%, #ff6347 25%, #ff6347 50%, #00ff00 50%, #00ff00 75%, #0000ff 75%, #0000ff 100%);
-  }
-  
-  .porcion3 {
-    transform: rotate(180deg);
-    background: conic-gradient(#0000ff 0%, #0000ff 25%, #ffd700 25%, #ffd700 50%, #ff6347 50%, #ff6347 75%, #00ff00 75%, #00ff00 100%);
-  }
-  
-  .porcion4 {
-    transform: rotate(270deg);
-    background: conic-gradient(#00ff00 0%, #00ff00 25%, #0000ff 25%, #0000ff 50%, #ffd700 50%, #ffd700 75%, #ff6347 75%, #ff6347 100%);
-  }
 
+#Title{
+    display: flex;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: large;
+    padding-top: 0;
+    padding-bottom: 0;
+}
 
+#Title h1{
+    margin-left: 20px;
+}
+.questions{
+    display: flex;
+    justify-content: space-between;
+}
+
+.questions h2{
+    font-size: small;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    height: 36px;
+    margin-top: 10px;
+}
+.questions h2:hover{
+    color: var(--GrayishPurple);
+}
+
+.questions img{
+    margin-right: 20px;
+}
+
+p{
+    font-size: small;
+    margin: 0px 20px 20px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.293);
+    display: none;
+}
